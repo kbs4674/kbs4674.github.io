@@ -17,6 +17,7 @@
     
     <!-- Customize Nav-bar -->
     <link rel="stylesheet" href="/file/nav-bar/agency.min.css"/>
+    <link rel="stylesheet" href="/file/css/customize.css"/>
     <script type="text/javascript" src="/file/nav-bar/bootstrap.bundle.min.js"></script>
     
     <!-- 부드러운 스크롤 -->
@@ -31,7 +32,10 @@
     <script type="text/javascript" src="/file/js/typeahead/handlebars.js"></script>
     
     <!-- 폰트 정의 -->
+    <!-- NanumGothic, Nanum Pen Script -->
     <link href="/file/css/font.css" rel="stylesheet">
+    <!-- Nanum Brush Script -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
     
     <!-- Typed.js -->
     <script type="text/javascript" src="/file/js/typed/typed.min.js"></script>
@@ -108,7 +112,7 @@
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="/">커피에 빠지다</a>
+          <a class="navbar-brand js-scroll-trigger" style="font-family: 'Nanum Pen Script';" href="/">Coffee PongDang</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             메뉴
             <i class="fa fa-bars"></i>
@@ -124,6 +128,9 @@
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#team">Team</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" style="color: #ffbaba;"><i class="fas fa-map-marker-alt"></i> 강원도 춘천시</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -131,7 +138,8 @@
       
       <!-- Customize Nav-bar -->
       <script type="text/javascript" src="/file/nav-bar/agency.min.js"></script>
-       <!-- Typed.js 문자 리스트 -->
+      
+      <!-- Typed.js 문자 리스트 -->
       <div id="coffee">
       <p>아메리카노</p>
       <p>카라멜 마끼야또</p>
@@ -142,24 +150,59 @@
       <p>인스턴트 커피</p>
       <p>카페 디저트</p>
       </div>
-      
-      <div style="margin-top: 60px;"></div>
   
       <div id="wrapper">
-        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 250px; color: white; font-size: 60px;">
+        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 300px; color: white; font-size: 60px;">
           <center>
             오늘은 <span id="typed" style="color: yellow"></span> 가 땡긴다.
               <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
-                <input class="typeahead form-control" type="text" placeholder="검색(Default: 가게)" style="font-size: 30px;">
+                <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
               </div>
           </center>
         </div>
-        <div id="myPlayer" style="background: #000; height: 600px; width: 100%; position: relative;"></div>
-        <div id="customElement" class="player" data-property="{videoURL:'YMrwC82WVB8',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
+        <div id="myPlayer" style="background: #000; height: 800px; width: 100%; position: relative;"></div>
+        <div id="customElement" class="player" data-property="{videoURL:'https://youtu.be/iCA_5eBL_lY',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
       </div>
       
-      니코니코니
-      <span class="element"></span>
+      <div class="container">
+        <div style="margin-top: 70px;">
+          <div align="center" style="font-size: 40px;">이달의 카페</div>
+          <hr width="150px;"/><br/>
+          <center style="margin-top: -30px;"><span>이번 강원도 춘천시에서 선정된 Best 카페 입니다.</span></center>
+          <center>
+            <div class="row" style="margin-top: 50px;">
+              <div class="col">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
+                  <h3 style="margin-top: 30px;">카페 마운틴</h3>
+                  <i class="fas fa-map-marker-alt"></i> 강원대학교 내
+                  <hr width="70px;"/>
+                  <p>내용</p>
+              </div>
+              
+              <div class="col">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/craft_cafe.jpg"></div>
+                <h3 style="margin-top: 30px;">카페, 조운동</h3>
+                  <i class="fas fa-map-marker-alt"></i> 강원 춘천시 서부대성로 108
+                  <hr width="70px;"/>
+                  <p>내용</p>
+              </div>
+              
+              <div class="col">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/ediya.jpg"></div>
+                <h3 style="margin-top: 30px;">이디야 카페</h3>
+                  <i class="fas fa-map-marker-alt"></i> 강원대학교 후문
+                  <hr width="70px;"/>
+                  <p>내용</p>
+              </div>
+            </div>
+            <div class="btn btn-success">카페 더 둘러보기 <i class="fas fa-long-arrow-alt-right"></i></div>
+          </center>
+        </div>
+        
+        <div class="col-md-4"><img src="/file/img/cramel_coffee.png"></div>
+        <div class="col-md-8"></div>
+        
+      </div>
       
       <div style="margin-top: 3000px;"></div>
       
