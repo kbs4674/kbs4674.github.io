@@ -32,7 +32,7 @@
     <script type="text/javascript" src="/file/js/typeahead/handlebars.js"></script>
     
     <!-- 폰트 정의 -->
-    <!-- NanumGothic, Nanum Pen Script -->
+    <!-- NanumGothic, Nanum Pen Script, SangSangShin, SangSangAnt -->
     <link href="/file/css/font.css" rel="stylesheet">
     <!-- Nanum Brush Script -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
@@ -40,6 +40,7 @@
     <!-- Typed.js -->
     <script type="text/javascript" src="/file/js/typed/typed.min.js"></script>
     <script type="text/javascript" src="/file/js/typed/demos.js"></script>
+    <script type="text/javascript" src="/file/js/typed/demos_mobile.js"></script>
     
     <!-- Youtube Player -->
     <link href="/file/css/jquery.mb.YTPlayer.min.css" rel="stylesheet">
@@ -53,17 +54,6 @@
       top: 0;
       left: 0;
       z-index: 0;
-    }
-    
-    #testText {
-      position: absolute;
-      font-family: 'Lobster', cursive;
-      font-size: 40px;
-      text-align: center;
-      line-height: 80px;
-      width: 100%;
-      margin-top: 0;
-      text-shadow: 10px 10px 20px rgba(248, 248, 248, 0.60);
     }
     </style>
     <script>
@@ -108,6 +98,24 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+    
+    <script>
+      $(document).ready(function(){ 
+      var numberOfImages=2; 
+      var imageNum = Math.round(Math.random()*(numberOfImages-1))+1; 
+      var imgPath=('/file/img/coffee_background'+imageNum+'.png'); 
+      $('#mainbg_mobile').css('background-image', ('url("'+imgPath+'")')); 
+      });
+    </script>
+    
+    <style type="text/css"> 
+    #mainbg_mobile { 
+      height: 500px;
+      background-repeat: no-repeat; 
+      background-position: center/cove;
+    } 
+    </style>
+      
     </head>
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -141,20 +149,33 @@
       
       <!-- Typed.js 문자 리스트 -->
       <div id="coffee">
-      <p>아메리카노</p>
-      <p>카라멜 마끼야또</p>
-      <p>에스프레소</p>
-      <p>카페라떼</p>
-      <p>더치커피</p>
-      <p>카푸치노</p>
-      <p>인스턴트 커피</p>
-      <p>카페 디저트</p>
+        <p>아메리카노</p>
+        <p>카라멜 마끼야또</p>
+        <p>에스프레소</p>
+        <p>카페라떼</p>
+        <p>더치커피</p>
+        <p>카푸치노</p>
+        <p>인스턴트 커피</p>
+        <p>카페 디저트</p>
       </div>
+      
+      <div id="coffee_mobile">
+        <p>아메리카노</p>
+        <p>카라멜 마끼야또</p>
+        <p>에스프레소</p>
+        <p>카페라떼</p>
+        <p>더치커피</p>
+        <p>카푸치노</p>
+        <p>인스턴트 커피</p>
+        <p>카페 디저트</p>
+      </div>
+      <!-- Typed.js 문자 리스트 종료 -->
   
-      <div id="wrapper">
+      <!-- 메인 PC(부트스트랩 그리드 적용) -->
+      <div id="wrapper" class="d-none d-md-block">
         <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 300px; color: white; font-size: 60px;">
           <center>
-            오늘은 <span id="typed" style="color: yellow"></span> 가 땡긴다.
+            오늘은 <span id="typed" style="color: yellow; font-size: 70px; font-family: 'Nanum Brush Script'"></span>가 땡긴다.
             <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
               <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
             </div>
@@ -164,10 +185,22 @@
         <div id="customElement" class="player" data-property="{videoURL:'https://youtu.be/iCA_5eBL_lY',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
       </div>
       
+      <!-- 메인 모바일(부트스트랩 그리드 적용) -->
+      <div class="d-md-none" id="mainbg_mobile">
+        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 200px; color: white; font-size: 60px;">
+          <center>
+            <div style="font-size: 25px;">오늘은 <span id="typed_mobile" style="color: yellow; font-size: 30px; font-family: 'Nanum Brush Script'"></span>가 땡긴다.</div>
+            <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
+              <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
+            </div>
+          </center>
+        </div>
+      </div>
+      
       <div class="container">
         <div style="margin-top: 70px;">
-          <div align="center" style="font-size: 40px;">이달의 카페</div>
-          <hr width="150px;"/><br/>
+          <div align="center" style="font-size: 90px; font-family: 'SangSangAnt'">이달의 카페</div>
+          <hr style="margin-top: -20px;" width="150px;"/><br/>
           <center style="margin-top: -30px;"><span>이번 강원도 춘천시에서 선정된 Best 카페 입니다.</span></center>
           <center>
             <div class="row" style="margin-top: 50px;">
@@ -203,10 +236,10 @@
       <div style="background-image: url(/file/img/main_background.png); padding-top: 100px; padding-bottom: 100px; margin-top: 100px;">
         <div class="container">
           <div class="row" style="background-color: rgba(255, 255, 255, 0.76); padding-top: 20px; padding-bottom: 20px;">
-            <div class="col-md-5"><img src="/file/img/cramel_coffee.png"></div>
-            <div class="col-md-7">
-              <p align="center" style="font-size: 30px;">카라멜 마끼야또</p>
-              <hr width="100px;"/>
+            <div class="col-12 col-md-5"><img src="/file/img/cramel_coffee.png"></div>
+            <div class="col-12 col-md-7">
+              <div align="center" style="font-size: 70px; font-family: 'SangSangshin'">카라멜 마끼야또</div>
+              <hr style="margin-top: -10px;" width="100px;"/>
               <span style="font-size: 20px;">
                 내용
               </span>
