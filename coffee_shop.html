@@ -147,105 +147,65 @@
       <!-- Customize Nav-bar -->
       <script type="text/javascript" src="/file/nav-bar/agency.min.js"></script>
       
-      <!-- Typed.js 문자 리스트 -->
-      <div id="coffee">
-        <p>아메리카노</p>
-        <p>카라멜 마끼야또</p>
-        <p>에스프레소</p>
-        <p>카페라떼</p>
-        <p>더치커피</p>
-        <p>카푸치노</p>
-        <p>인스턴트 커피</p>
-        <p>카페 디저트</p>
-      </div>
-      
-      <div id="coffee_mobile">
-        <p>아메리카노</p>
-        <p>카라멜 마끼야또</p>
-        <p>에스프레소</p>
-        <p>카페라떼</p>
-        <p>더치커피</p>
-        <p>카푸치노</p>
-        <p>인스턴트 커피</p>
-        <p>카페 디저트</p>
-      </div>
-      <!-- Typed.js 문자 리스트 종료 -->
-  
-      <!-- 메인 PC(부트스트랩 그리드 적용) -->
-      <div id="wrapper" class="d-none d-md-block">
-        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 300px; color: white; font-size: 60px;">
-          <center>
-            오늘은 <span id="typed" style="color: yellow; font-size: 70px; font-family: 'Nanum Brush Script'"></span>가 땡긴다.
-            <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
-              <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
-            </div>
-          </center>
-        </div>
-        <div id="myPlayer" style="background: #000; height: 800px; width: 100%; position: relative;"></div>
-        <div id="customElement" class="player" data-property="{videoURL:'https://youtu.be/iCA_5eBL_lY',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
-      </div>
-      
-      <!-- 메인 모바일(부트스트랩 그리드 적용) -->
-      <div class="d-md-none" id="mainbg_mobile">
-        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 200px; color: white; font-size: 60px;">
-          <center>
-            <div style="font-size: 25px;">오늘은 <span id="typed_mobile" style="color: yellow; font-size: 30px; font-family: 'Nanum Brush Script'"></span>가 땡긴다.</div>
-            <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
-              <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
-            </div>
-          </center>
+      <!-- 상단 배너(PC) -->
+      <div class="main_banner d-none d-sm-block" style="background: url('/file/img/main_banner1.png') no-repeat fixed;">
+        <div class="container main_banner_text" align="left">
+          커피샵 목록
         </div>
       </div>
       
-      <div class="container">
-        <div style="margin-top: 70px;">
-          <div align="center" style="font-size: 90px; font-family: 'SangSangAnt'">이달의 카페</div>
-          <hr style="margin-top: -20px;" width="150px;"/><br/>
-          <center style="margin-top: -30px;"><span>이번 강원도 춘천시에서 선정된 Best 카페 입니다.</span></center>
-          <center>
-            <div class="row" style="margin-top: 50px;">
-              <div class="col">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
-                  <h3 style="margin-top: 30px;">카페 마운틴</h3>
-                  <i class="fas fa-map-marker-alt"></i> 강원대학교 내
-                  <hr width="70px;"/>
-                  <p>내용</p>
-              </div>
-              
-              <div class="col">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/craft_cafe.jpg"></div>
-                <h3 style="margin-top: 30px;">카페, 조운동</h3>
-                  <i class="fas fa-map-marker-alt"></i> 강원 춘천시 서부대성로 108
-                  <hr width="70px;"/>
-                  <p>내용</p>
-              </div>
-              
-              <div class="col">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/ediya.jpg"></div>
-                <h3 style="margin-top: 30px;">이디야 카페</h3>
-                  <i class="fas fa-map-marker-alt"></i> 강원대학교 후문
-                  <hr width="70px;"/>
-                  <p>내용</p>
-              </div>
-            </div>
-            <div class="btn btn-success">카페 더 둘러보기 <i class="fas fa-long-arrow-alt-right"></i></div>
-          </center>
-        </div>
+      <!-- 상단 배너(모바일) -->
+      <div class="d-sm-none main_banner_mobile" style="background: url('/file/img/main_banner1.png') no-repeat center center/cover scroll;">
+        커피샵 목록
       </div>
-        
-      <div style="background-image: url(/file/img/main_background.png); padding-top: 100px; padding-bottom: 100px; margin-top: 100px;">
-        <div class="container">
-          <div class="row" style="background-color: rgba(255, 255, 255, 0.76); padding-top: 20px; padding-bottom: 20px;">
-            <div class="col-12 col-md-5"><img src="/file/img/cramel_coffee.png"></div>
-            <div class="col-12 col-md-7">
-              <div align="center" style="font-size: 70px; font-family: 'SangSangshin'">카라멜 마끼야또</div>
-              <hr style="margin-top: -10px;" width="100px;"/>
-              <span style="font-size: 20px;">
-                내용
-              </span>
+      
+      <div style="background-image: url(/file/img/main_background.png); padding-top: 50px; padding-bottom: 50px; color: white;">
+      <div class="container" align="center">
+        <div class="d-none d-sm-block" align="center" style="font-size: 90px; font-family: 'SangSangAnt';">Best of Coffee Shop</div>
+        <div class="d-sm-none" align="center" style="font-size: 40px; font-family: 'SangSangAnt';">Best of Coffee Shop</div>
+        <hr align="center" width="200px;" style="margin-top: -10px; border: 1px solid white"/>
+        <div class="d-none d-sm-block" style="margin-top: 20px; font-size: 25px;" align="center">이번 달 Best 커피샵 입니다.</div>
+        <div class="d-sm-none" style="margin-top: 0px; font-size: 20px;" align="center">이번 달 Best 커피샵 입니다.</div>
+        <div class="row" style="margin-top: 50px; color: black;">
+          <!-- 카페 마운틴 with Modal 시작 -->
+          <div class="col" data-toggle="modal" data-target=".cafe_mountain">
+            <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
+              <h3 style="margin-top: 30px;">카페 마운틴</h3>
+          </div>
+
+          <div class="modal fade cafe_mountain" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="row" style="padding: 50px;">
+                  <div class="col-12 col-md-6"><img width="100%" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
+                  <div class="col-12 col-md-6" align="left">
+                    <br class="d-sm-none"/>
+                    카페소개 내용
+                    <hr/>
+                    <div class="btn btn-sm btn-primary" style="font-size: 10px; font-weight: bold;">Open</div> 09:00
+                    <div class="btn btn-sm btn-danger" style="font-size: 10px; font-weight: bold; margin-left: 20px;">Close</div> 18:00<br/><br/>
+                    <i class="fas fa-star"></i> 4.8 / 5<br/>
+                    <i class="fas fa-hashtag"></i> <code>#싸다</code> <code>#가성비_갑</code> <code>#편리함</code><br/>
+                    <i class="fas fa-map-marker-alt"></i> 강원도 춘천시 강원대학교 교내(한빛관, 천지관)<br/>
+                    <i class="fas fa-phone"></i> <a href="tel:010-5021-4674">연락처(010-5021-4674)</a><br/>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- 카페 마운틴 with Modal 종료 -->
+          
+          <div class="col">
+            <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/craft_cafe.jpg"></div>
+            <h3 style="margin-top: 30px;">카페, 조운동</h3>
+          </div>
+          
+          <div class="col">
+            <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/ediya.jpg"></div>
+            <h3 style="margin-top: 30px;">이디야 카페</h3>
+          </div>
         </div>
+      </div>
       </div>
       
       <div align="center" style="background-color: black; padding-top: 50px; padding-bottom: 50px; color: white; font-size: 15px;">
