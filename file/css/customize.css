@@ -40,3 +40,7 @@ input:focus {
 .main_banner_text {
     border-left: 10px solid #fff;
 }
+
+.content_decoration {
+    border-left: 10px solid black;
+}

@@ -182,7 +182,7 @@
           </center>
         </div>
         <div id="myPlayer" style="background: #000; height: 800px; width: 100%; position: relative;"></div>
-        <div id="customElement" class="player" data-property="{videoURL:'https://youtu.be/iCA_5eBL_lY',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
+        <div id="customElement" class="player" data-property="{videoURL:'https://youtu.be/dcHRT1z_omA',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
       </div>
       
       <!-- 메인 모바일(부트스트랩 그리드 적용) -->
@@ -203,37 +203,53 @@
           <hr style="margin-top: -20px;" width="150px;"/><br/>
           <center style="margin-top: -30px;"><span>이번 강원도 춘천시에서 선정된 Best 카페 입니다.</span></center>
           <center>
-            <div class="row" style="margin-top: 50px;">
-              <div class="col">
+            <!-- PC -->
+            <div class="row" style="margin-top: 50px; color: black;">
+              <!-- 카페 마운틴 -->
+              <div class="col d-none d-md-block" data-toggle="modal" data-target=".cafe_mountain">
                 <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
                   <h3 style="margin-top: 30px;">카페 마운틴</h3>
-                  <i class="fas fa-map-marker-alt"></i> 강원대학교 내
-                  <hr width="70px;"/>
-                  <p>내용</p>
               </div>
               
-              <div class="col">
+              <!-- 카페 조운동 -->
+              <div class="col d-none d-md-block" data-toggle="modal" data-target=".cafe_joundong">
                 <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/craft_cafe.jpg"></div>
                 <h3 style="margin-top: 30px;">카페, 조운동</h3>
-                  <i class="fas fa-map-marker-alt"></i> 강원 춘천시 서부대성로 108
-                  <hr width="70px;"/>
-                  <p>내용</p>
               </div>
               
-              <div class="col">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/ediya.jpg"></div>
-                <h3 style="margin-top: 30px;">이디야 카페</h3>
-                  <i class="fas fa-map-marker-alt"></i> 강원대학교 후문
-                  <hr width="70px;"/>
-                  <p>내용</p>
+              <!-- 스타벅스 -->
+              <div class="col d-none d-md-block" data-toggle="modal" data-target=".starbucks">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/starbucks.png"></div>
+                <h3 style="margin-top: 30px;">스타벅스</h3>
               </div>
             </div>
-            <div class="btn btn-success">카페 더 둘러보기 <i class="fas fa-long-arrow-alt-right"></i></div>
+            
+            <!-- 모바일 -->
+            <div class="row" style="margin-top: 0px; color: black;">
+              <!-- 카페 마운틴 -->
+              <div class="col d-md-none" data-toggle="modal" data-target=".cafe_mountain">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="150px" height="150px;" src="/file/img/cafe_mountain.jpg"></div>
+                  <h5 style="margin-top: 10px;">카페 마운틴</h5>
+              </div>
+              
+              <!-- 카페 조운동 -->
+              <div class="col d-md-none" data-toggle="modal" data-target=".cafe_joundong">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="150px" height="150px;" src="/file/img/craft_cafe.jpg"></div>
+                <h5 style="margin-top: 10px;">카페, 조운동</h5>
+              </div>
+              
+              <!-- 스타벅스 -->
+              <div class="col d-md-none" data-toggle="modal" data-target=".starbucks">
+                <div class="img-holder"><img class="rounded-circle image_overshadow" width="150px" height="150px;" src="/file/img/starbucks.png"></div>
+                <h5 style="margin-top: 10px;">스타벅스</h5>
+              </div>
+            </div>
+            <a class="btn btn-success" href="/coffee_shop.html">카페 더 둘러보기 <i class="fas fa-long-arrow-alt-right"></i></a>
           </center>
         </div>
       </div>
         
-      <div style="background-image: url(/file/img/main_background.png); padding-top: 100px; padding-bottom: 100px; margin-top: 100px;">
+      <div style="background-image: url(/file/img/main_background.jpg); padding-top: 100px; padding-bottom: 100px; margin-top: 100px;">
         <div class="container">
           <div class="row" style="background-color: rgba(255, 255, 255, 0.76); padding-top: 20px; padding-bottom: 20px;">
             <div class="col-12 col-md-5"><img src="/file/img/cramel_coffee.png"></div>
@@ -254,12 +270,97 @@
         <span style="font-size: 17px;"><i class="fab fa-github-alt"></i>　<a href="https://github.com/kbs4674/kbs4674.github.io" style="color: white;">https://github.com/kbs4674/kbs4674.github.io</a></span><br/>
       </div>
       
+      <!-- Modal 목록 -->
+      <!-- 카페 마운틴 시작 -->
+      <div class="modal fade cafe_mountain" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="row" style="padding: 50px;">
+              <div class="col-12 col-md-6"><img width="100%" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
+              <div class="col-12 col-md-6" align="left">
+                <br class="d-sm-none"/>
+                카페소개 내용
+                <hr/>
+                <div class="btn btn-sm btn-primary" style="font-size: 10px; font-weight: bold;">Open</div> 09:00
+                <div class="btn btn-sm btn-danger" style="font-size: 10px; font-weight: bold; margin-left: 20px;">Close</div> 18:00<br/><br/>
+                <i class="fas fa-star"></i> 4.8 / 5<br/>
+                <i class="fas fa-hashtag"></i> <code>#싸다</code> <code>#가성비_갑</code> <code>#편리함</code><br/>
+                <i class="fas fa-map-marker-alt"></i> 강원도 춘천시 강원대학교 교내(한빛관, 천지관)<br/>
+                <i class="fas fa-phone"></i> <a href="tel:0332507789">연락처(033-250-7789)</a><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 카페 마운틴 종료 -->
+      
+      <!-- 카페 조운동 시작 -->
+      <div class="modal fade cafe_joundong" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="row" style="padding: 50px;">
+              <div class="col-12 col-md-6"><img width="100%" height="300px;" src="/file/img/craft_cafe.jpg"></div>
+              <div class="col-12 col-md-6" align="left">
+                <br class="d-sm-none"/>
+                카페소개 내용
+                <hr/>
+                <div class="btn btn-sm btn-primary" style="font-size: 10px; font-weight: bold;">Open</div> 11:00
+                <div class="btn btn-sm btn-danger" style="font-size: 10px; font-weight: bold; margin-left: 20px;">Close</div> 23:00<br/><br/>
+                <i class="fas fa-star"></i> 4.3 / 5<br/>
+                <i class="fas fa-hashtag"></i> <code>#모던감성</code> <code>#춘천_감성문화공간</code> <code>#작고_조용한_카페</code><br/>
+                <i class="fas fa-map-marker-alt"></i> 강원 춘천시 서부대성로 108<br/>
+                <i class="fas fa-phone"></i> <a href="tel:01062263852">연락처(010-6226-3852)</a><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 카페 조운동 종료 -->
+      
+      <!-- 스타벅스 시작 -->
+      <div class="modal fade starbucks" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="row" style="padding: 50px;">
+              <div class="col-12 col-md-6"><img width="100%" height="300px;" src="/file/img/starbucks.png"></div>
+              <div class="col-12 col-md-6" align="left">
+                <br class="d-sm-none"/>
+                카페소개 내용
+                <hr/>
+                <div class="btn btn-sm btn-primary" style="font-size: 10px; font-weight: bold;">Open</div> 09:00
+                <div class="btn btn-sm btn-danger" style="font-size: 10px; font-weight: bold; margin-left: 20px;">Close</div> 23:30<br/><br/>
+                <i class="fas fa-star"></i> 4.2 / 5<br/>
+                <i class="fas fa-hashtag"></i> <code>#오래있어도_눈치안줌</code> <code>#Every_where</code><br/>
+                <i class="fas fa-map-marker-alt"></i> 강원 춘천시 서부대성로 243-1<br/>
+                <i class="fas fa-phone"></i> <a href="tel:0332568490">연락처(033-256-8490)</a><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 스타벅스 종료 -->
+      
       <!-- typeahead 목록 -->
       <script>
         var links =
         [
-              {name: "내 가게", id: "my_store"},
-              {name: "니 가게", id: "your_store"}
+              {name: "카페 마운틴", id: "cafe_mountain"},
+              {name: "Cafe Mountain", id: "cafe_mountain"},
+              {name: "카페 조운동", id: "cafe_joundong"},
+              {name: "스타벅스", id: "starbucks"},
+              {name: "Star Bucks", id: "starbucks"},
+              {name: "이디야", id: "ediya"},
+              {name: "Ediya", id: "ediya"},
+              {name: "옥상 달빛", id: "moon_light"},
+              {name: "팔레뜨", id: "palette"},
+              {name: "Palette", id: "palette"},
+              {name: "포지티브즈", id: "positives"},
+              {name: "Positives", id: "positives"},
+              {name: "라그라스", id: "ragras"},
+              {name: "위위", id: "oui_oui"},
+              {name: "Oui Oui", id: "oui_oui"}
+              
+              
         ];
         
         var source = new Bloodhound({
@@ -280,7 +381,7 @@
         '해당 가게는 없습니다.',
         '</div>'
         ].join('\n'),
-        suggestion: Handlebars.compile('<div><a class="dropdown-item" href="/{{id}}">{{name}}</a></div>')
+        suggestion: Handlebars.compile('<div class="dropdown-item" data-toggle="modal" data-target=".{{id}}">{{name}}</div>')
         }
         });
       </script>
