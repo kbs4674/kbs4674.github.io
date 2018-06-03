@@ -103,7 +103,7 @@
       $(document).ready(function(){ 
       var numberOfImages=2; 
       var imageNum = Math.round(Math.random()*(numberOfImages-1))+1; 
-      var imgPath=('/file/img/coffee_background'+imageNum+'.png'); 
+      var imgPath=('/file/img/coffee_background'+imageNum+'.jpg'); 
       $('#mainbg_mobile').css('background-image', ('url("'+imgPath+'")')); 
       });
     </script>
@@ -147,128 +147,249 @@
       <!-- Customize Nav-bar -->
       <script type="text/javascript" src="/file/nav-bar/agency.min.js"></script>
       
-      <!-- Typed.js 문자 리스트 -->
-      <div id="coffee">
-        <p>아메리카노</p>
-        <p>카라멜 마끼야또</p>
-        <p>에스프레소</p>
-        <p>카페라떼</p>
-        <p>더치커피</p>
-        <p>카푸치노</p>
-        <p>인스턴트 커피</p>
-        <p>카페 디저트</p>
-      </div>
-      
-      <div id="coffee_mobile">
-        <p>아메리카노</p>
-        <p>카라멜 마끼야또</p>
-        <p>에스프레소</p>
-        <p>카페라떼</p>
-        <p>더치커피</p>
-        <p>카푸치노</p>
-        <p>인스턴트 커피</p>
-        <p>카페 디저트</p>
-      </div>
-      <!-- Typed.js 문자 리스트 종료 -->
-  
-      <!-- 메인 PC(부트스트랩 그리드 적용) -->
-      <div id="wrapper" class="d-none d-md-block">
-        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 300px; color: white; font-size: 60px;">
-          <center>
-            오늘은 <span id="typed" style="color: yellow; font-size: 70px; font-family: 'Nanum Brush Script'"></span>가 땡긴다.
-            <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
-              <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
-            </div>
-          </center>
-        </div>
-        <div id="myPlayer" style="background: #000; height: 800px; width: 100%; position: relative;"></div>
-        <div id="customElement" class="player" data-property="{videoURL:'https://youtu.be/dcHRT1z_omA',containment:'#myPlayer', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
-      </div>
-      
-      <!-- 메인 모바일(부트스트랩 그리드 적용) -->
-      <div class="d-md-none" id="mainbg_mobile">
-        <div class="col-md-12" style="position:absolute; top:0; z-index:1000; margin-top: 200px; color: white; font-size: 60px;">
-          <center>
-            <div style="font-size: 22px;">오늘은 <span id="typed_mobile" style="color: yellow; font-size: 30px; font-family: 'Nanum Brush Script'"></span>가 땡긴다.</div>
-            <div id="scrollable-dropdown-menudropdown-menu" class="col-md-4" style="margin-top: 20px; font-size: 20px;">
-              <input class="typeahead search_form col-md-12" type="text" placeholder="검색(Default: 가게)">
-            </div>
-          </center>
+      <!-- 상단 배너(PC) -->
+      <div class="d-none d-sm-block main_banner" style="background: url('/file/img/main_banner2.jpg') no-repeat fixed;">
+        <div class="container main_banner_text fade-anim" align="left">
+          방문후기
         </div>
       </div>
       
-      <div class="container">
-        <div style="margin-top: 70px;">
-          <div align="center" style="font-size: 90px; font-family: 'SangSangAnt'">이달의 카페</div>
-          <hr style="margin-top: -20px;" width="150px;"/><br/>
-          <center style="margin-top: -30px;"><span>이번 강원도 춘천시에서 선정된 Best 카페 입니다.</span></center>
-          <center>
-            <!-- PC -->
-            <div class="row" style="margin-top: 50px; color: black;">
-              <!-- 카페 마운틴 -->
-              <div class="col d-none d-md-block" data-toggle="modal" data-target=".cafe_mountain">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/cafe_mountain.jpg"></div>
-                  <h3 style="margin-top: 30px;">카페 마운틴</h3>
-              </div>
-              
-              <!-- 카페 조운동 -->
-              <div class="col d-none d-md-block" data-toggle="modal" data-target=".cafe_joundong">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/craft_cafe.jpg"></div>
-                <h3 style="margin-top: 30px;">카페, 조운동</h3>
-              </div>
-              
-              <!-- 스타벅스 -->
-              <div class="col d-none d-md-block" data-toggle="modal" data-target=".starbucks">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="300px" height="300px;" src="/file/img/starbucks.png"></div>
-                <h3 style="margin-top: 30px;">스타벅스</h3>
-              </div>
-            </div>
-            
-            <!-- 모바일 -->
-            <div class="row" style="margin-top: 0px; color: black;">
-              <!-- 카페 마운틴 -->
-              <div class="col d-md-none" data-toggle="modal" data-target=".cafe_mountain">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="150px" height="150px;" src="/file/img/cafe_mountain.jpg"></div>
-                  <h5 style="margin-top: 10px;">카페 마운틴</h5>
-              </div>
-              
-              <!-- 카페 조운동 -->
-              <div class="col d-md-none" data-toggle="modal" data-target=".cafe_joundong">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="150px" height="150px;" src="/file/img/craft_cafe.jpg"></div>
-                <h5 style="margin-top: 10px;">카페, 조운동</h5>
-              </div>
-              
-              <!-- 스타벅스 -->
-              <div class="col d-md-none" data-toggle="modal" data-target=".starbucks">
-                <div class="img-holder"><img class="rounded-circle image_overshadow" width="150px" height="150px;" src="/file/img/starbucks.png"></div>
-                <h5 style="margin-top: 10px;">스타벅스</h5>
-              </div>
-            </div>
-            <a class="btn btn-success" href="/coffee_shop.html" style="margin-top: 40px;">카페 더 둘러보기 <i class="fas fa-long-arrow-alt-right"></i></a>
-          </center>
-        </div>
+      <!-- 상단 배너(모바일) -->
+      <div class="d-sm-none main_banner_mobile" style="background: url('/file/img/main_banner2.jpg') no-repeat center center/cover scroll;">
+        <span class="fade-anim">방문후기</span>
       </div>
-        
-      <div style="background-image: url(/file/img/main_background.jpg); padding-top: 100px; padding-bottom: 100px; margin-top: 100px;">
-        <div class="container">
-          <div class="row" style="background-color: rgba(255, 255, 255, 0.76); padding-top: 20px; padding-bottom: 20px;">
-            <div class="col-12 col-md-5"><img width="100%" src="/file/img/cramel_coffee.png"></div>
-            <div class="col-12 col-md-7">
-              <div align="center" style="font-size: 70px; font-family: 'SangSangshin'">카라멜 마끼야또</div>
-              <hr style="margin-top: -10px;" width="100px;"/>
-              <span style="font-size: 20px;">
-                <div style="text-align:center">
-                  <p><b>오늘의 추천 메뉴</b></p>
-                 "<span style="font-size: 35px; font-family: 'SangSangshin'">Freshly steamed milk with vanilla-flavored syrup, marked with espresso and finished with caramel sauce</span>"<br/> 거품을 낸 우유에 바닐라향 시럽 넣고, 에스프레소를 약간 넣은 후 그 위에 캐러멜 소스를 뿌리는 것으로 우유 거품위에 소스가 얹어지게 되는데 이를 보통 드리즐이라고 부른다.<br/><br/>
-                 <div align="left" style="font-size: 15px; color: blue;"> #카라멜마끼아또 #달아~#달아~#너무달아~#커피스타그램</div>
-                 </div>
-              </span>
+      
+      <ul class="nav nav-tabs container" id="myTab" role="tablist" style="margin-top: 50px;">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#ragras" role="tab" aria-controls="home" aria-selected="true">라그라스</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#starbucks" role="tab" aria-controls="profile" aria-selected="false">스타벅스</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#moon_light" role="tab" aria-controls="contact" aria-selected="false">옥상달빛</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#oui_oui" role="tab" aria-controls="contact" aria-selected="false">위위</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#ediya" role="tab" aria-controls="contact" aria-selected="false">이디야</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#cafe_mountain" role="tab" aria-controls="contact" aria-selected="false">카페 마운틴</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#joundong" role="tab" aria-controls="contact" aria-selected="false">카페 조운동</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#palette" role="tab" aria-controls="contact" aria-selected="false">팔레트</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#positives" role="tab" aria-controls="contact" aria-selected="false">포지티브즈</a>
+        </li>
+      </ul>
+      
+      <div class="tab-content" id="myTabContent">
+        <!-- 라그라스 -->
+        <div class="container tab-pane fade show active" id="ragras" role="tabpanel" aria-labelledby="profile-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/ragras_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/aowja9030?Redirect=Log&logNo=221286241351" target="_blank">
+              <div>
+                <div style="font-weight: bold">꿀땅콩(aowja9030) / 18. 5. 28.</div><br/>
+                강대 후문근처에 있다고해서 찾아갔는데 - 정말 골목에 가정집처럼 되어있었다.<br/>
+                (참고로 밤에가야 진짜 이쁠꺼같음)
+              </div>
+            </a>
             </div>
           </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+          
+          <!-- 리뷰 2 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/ragras_2.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/fre_egsiahihi/221266785335" target="_blank">
+              <div>
+                <div style="font-weight: bold">u-ha(fre_egsiahihi) / 18. 5. 2.</div><br/>
+                최근에 다녀온 카페인 'RAGRAS'라그라스 입니다.<br/>
+                춘천 강원대 축협사거리나 팔호광장 근처이고 카페 주변에 원룸들이 많아 간판을 잘 보고...
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 2 끝 -->
+          
+          <!-- 리뷰 3 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/ragras_3.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/csm03098?Redirect=Log&logNo=221284367452" target="_blank">
+              <div>
+                <div style="font-weight: bold">지련(csm03098) / 18. 5. 26.</div><br/>
+                밥을 거하게 먹고 걸어서 강대 카페에 다녀왔어요!<br/>
+                강대후문에서 중부지구대쪽으로 내려오면 있는 라그라스 입니당 :) 운영시간은 오전 11시부터 오후 11시!
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 3 끝 -->
+        </div>
+        
+        <!-- 스타벅스 -->
+        <div class="container tab-pane fade" id="starbucks" role="tabpanel" aria-labelledby="home-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/starbucks_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/nosky1004/220251415268" target="_blank">
+              <div>
+                <div style="font-weight: bold">강원아지매(nosky1004) / 15. 1. 25.</div><br/>
+                분위기는 명동이 나은 것 같긴한데 우린 공부하는 학생컨셉이니께 ㅋㅋㅋ<br/>
+                우리 방송국 본사 정기자가 페북에 커피...
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 옥상달빛 -->
+        <div class="container tab-pane fade" id="moon_light" role="tabpanel" aria-labelledby="profile-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/moon_light_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="http://blog.naver.com/bitnastyle/220971672254" target="_blank">
+              <div>
+                <div style="font-weight: bold">Bitnara(bitnarastyle) / 17. 3. 31.</div><br/>
+                카페는 #옥상달빛 #정원달빛 이름도 너무 너무 이쁜 #강원대 #핫플레이스 #카페 랍니다<br/>
+                #주택개조카페 인데,, 곳곳에 주인장 부부의 센스가 돋는 #감성카페 에요..
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 위위(oui oui) -->
+        <div class="container tab-pane fade" id="oui_oui" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/oui_oui_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="http://hititler.tistory.com/1781" target="_blank">
+              <div>
+                <div style="font-weight: bold">히티틀러의 여행이야기 / 18. 03. 06.</div><br/>
+                강원대학교 후문 쪽에 있는 유명한 디저트 카페인 위위 Oui Oui 를 다녀왔어요.<br/>
+                사실 이전부터 가보고 싶었던 곳이라 두어 번 찾아가본 적이 있었는데, 그 때마다 문이...
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 이디야 -->
+        <div class="container tab-pane fade" id="ediya" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/ediya_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <div style="font-weight: bold">버블티쨔응(rdksdc243) / 15. 7. 24</div><br/>
+              비싸긴 해도 버블티 만큼은 ㅇㅈ할 수 있는 커피집인 이디야...<br/>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 카페 마운틴 -->
+        <div class="container tab-pane fade" id="cafe_mountain" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/cafe_mountain_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/since170821am/221127563464" target="_blank">
+              <div>
+                <div style="font-weight: bold">나는 모지(since170821am) / 17. 10. 29.</div><br/>
+                강원대에는!! 학교를 대표하는 카페가 있다!!<br/>
+                " 마운틴 " @농대마운틴 / @육주마운틴 이렇게 두군데가 있고.. 작년과 올해를 기점으로 거의 각 단대별로 카페가 생겼는데..
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 조운동 -->
+        <div class="container tab-pane fade" id="joundong" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/joundong_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/llbagall/221255346015" target="_blank">
+              <div>
+                <div style="font-weight: bold">Myho(llbagall) / 18. 4. 17.</div><br/>
+                춘천의 분위기 좋은카페를 소개합니다 구 춘여고와 팔호광장 사이에 위치한 감성 카페 조운동 한림대, 강원대와 가깝습니다.<br/>
+                영업시간 오전 11시~오후11시 주택을 개조한...
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 팔레트 -->
+        <div class="container tab-pane fade" id="palette" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/palette_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/mickey264891/221235669390" target="_blank">
+              <div>
+                <div style="font-weight: bold">알미(mickey264891) / 18. 3. 24.</div><br/>
+                내 맘대로 골라만들어 먹을수 있는, 요거트카페 팔레트 춘천 강후문에 맛있는 요거트 카페가 생겼어요!<br/>
+                생긴지 얼마안되어서 많이 모르시더라구요 :) 인스타그램으로..
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
+        </div>
+        
+        <!-- 포지티브즈 -->
+        <div class="container tab-pane fade" id="positives" role="tabpanel" aria-labelledby="contact-tab">
+          <!-- 리뷰 1 -->
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-5 col-md-2"><img width="100%" class="rounded" src="/file/img/review/positives_1.png"></div>
+            <div align="left" class="col-7 col-md-10">
+              <a style="color: #696969;" href="https://blog.naver.com/coco7341/221002893341" target="_blank">
+              <div>
+                <div style="font-weight: bold">wonii(coco7341) / 17. 5. 11</div><br/>
+                :) 그리고 다음에 갔을 때는, 꼭 날씨가 좋아서 외부에 앉았으면 좋겠다.<br/>
+                춘천 카페, 포지티브즈 꼭 한번 들려도 아쉬움 없는 카페입니다.
+              </div>
+            </a>
+            </div>
+          </div>
+          <hr/>
+          <!-- 리뷰 1 끝 -->
         </div>
       </div>
       
-      <div align="center" style="background-color: black; padding-top: 50px; padding-bottom: 50px; color: white; font-size: 15px;">
+      <div align="center" style="background-color: black; padding-top: 50px; padding-bottom: 50px; margin-top: 30px; color: white; font-size: 15px;">
         강원대학교 2018년도 기말고사 과제 제출용<br/>
         201514879 김철민 / 201313553 장우성<br/><br/>
         <span style="font-size: 17px;"><i class="fab fa-github-alt"></i>　<a href="https://github.com/kbs4674/kbs4674.github.io" style="color: white;">https://github.com/kbs4674/kbs4674.github.io</a></span><br/>
@@ -476,51 +597,5 @@
         </div>
       </div>
       <!-- 위위(oui_oui) 종료 -->
-      
-      <!-- typeahead 목록 -->
-      <script>
-        var links =
-        [
-              {name: "카페 마운틴", id: "cafe_mountain"},
-              {name: "Cafe Mountain", id: "cafe_mountain"},
-              {name: "카페 조운동", id: "cafe_joundong"},
-              {name: "스타벅스", id: "starbucks"},
-              {name: "Star Bucks", id: "starbucks"},
-              {name: "이디야", id: "ediya"},
-              {name: "Ediya", id: "ediya"},
-              {name: "옥상 달빛", id: "moon_light"},
-              {name: "팔레뜨", id: "palette"},
-              {name: "Palette", id: "palette"},
-              {name: "포지티브즈", id: "positives"},
-              {name: "Positives", id: "positives"},
-              {name: "라그라스", id: "ragras"},
-              {name: "위위", id: "oui_oui"},
-              {name: "Oui Oui", id: "oui_oui"}
-              
-              
-        ];
-        
-        var source = new Bloodhound({
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name', 'id'),
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
-        local: links
-        });
-        
-        source.initialize();
-        
-        $('.typeahead').typeahead(null, {
-        displayKey: 'name',
-        limit: 5,
-        source: source.ttAdapter(),
-        templates: {
-        empty: [
-        '<div style="margin-top: 15px; text-align: center;" class="empty-message">',
-        '해당 가게는 없습니다.',
-        '</div>'
-        ].join('\n'),
-        suggestion: Handlebars.compile('<div class="dropdown-item" data-toggle="modal" data-target=".{{id}}">{{name}}</div>')
-        }
-        });
-      </script>
     </body>
 </html>
